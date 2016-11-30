@@ -1,0 +1,15 @@
+{
+  "name": "simple-auction",
+  "scripts": {
+    "start": "node --harmony index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bootstrap": "^4.0.0-alpha.5",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "imgix.js": "^3.0.4",
+    "jquery": "^3.1.1",
+    "lowdb": "^0.14.0"
+  }
+}

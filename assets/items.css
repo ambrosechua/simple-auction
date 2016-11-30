@@ -1,0 +1,17 @@
+.items {
+	margin: -1em;
+}
+.item {
+	margin: 1em;
+}
+
+@media (min-width: 768px) {
+	.items {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.item {
+		flex: 1 0 auto;
+		width: calc(50% - 4em);
+	}
+}

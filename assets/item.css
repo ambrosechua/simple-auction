@@ -1,0 +1,22 @@
+.crop-wide {
+	display: none;
+}
+.crop-narrow {
+	display: block;
+}
+
+.images {
+	margin: -1em;
+}
+.image {
+	margin: 1em;
+}
+
+@media (min-width: 768px) {
+	.crop-wide {
+		display: block;
+	}
+	.crop-narrow {
+		display: none;
+	}
+}
