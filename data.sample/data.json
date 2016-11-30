@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "description": "Fancy cards",
+      "quantity": 1,
+      "bid": {
+        "starting": 10,
+        "increment": 2
+      },
+      "images": [
+        {
+          "src": "1.jpg"
+        }
+      ]
+    }
+  ]
+}
