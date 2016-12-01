@@ -1,55 +1,51 @@
 {{#if item}}
 {{#with item}}
-<main class="container-fluid">
-	<div class="row">
-		<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
-			<div class="alert alert-success" role="alert" id="success" style="display: none;"></div>
-			<div class="alert alert-danger" role="alert" id="error" style="display: none;"></div>
-		</div>
+<div class="row">
+	<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+		<div class="alert alert-success" role="alert" id="success" style="display: none;"></div>
+		<div class="alert alert-danger" role="alert" id="error" style="display: none;"></div>
 	</div>
-	<div class="row">
-		<div class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-4 offset-lg-2 mb-1">
-			<div class="images">
-			{{#each images}}
-				<div class="image">
-					<a href="https://{{@root.config.imgix}}/{{src}}?w=2048">
-						<img class="crop-wide img-fluid rounded" ix-src="https://{{@root.config.imgix}}/{{src}}?w=480&h=640&fit=crop&crop=edges" />
-						<img class="crop-narrow img-fluid rounded" ix-src="https://{{@root.config.imgix}}/{{src}}?w=768&h=480&fit=crop&crop=edges" />
-					</a>
-				</div>
-			{{/each}}
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-4 offset-lg-2 mb-1">
+		<div class="images">
+		{{#each images}}
+			<div class="image">
+				<a href="https://{{@root.config.imgix}}/{{src}}?w=2048">
+					<img class="crop-wide img-fluid rounded" ix-src="https://{{@root.config.imgix}}/{{src}}?w=480&h=640&fit=crop&crop=edges" />
+					<img class="crop-narrow img-fluid rounded" ix-src="https://{{@root.config.imgix}}/{{src}}?w=768&h=480&fit=crop&crop=edges" />
+				</a>
 			</div>
-		</div>
-		<div class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-4 offset-lg-0">
-			<h6 class="text-muted">Description</h6>
-			<p>{{description}}</p>
-			<h6 class="text-muted">{{#if bid.highest}}Highest{{else}}Starting{{/if}} bid</h6>
-			<h1 class="display-4" id="highest">${{#if bid.highest}}{{bid.highest}}{{else}}{{bid.starting}}{{/if}}</h1>
-			<form action="#" method="get">
-				<div class="form-group">
-					<div class="input-group">
-						<span class="input-group-addon">$</span>
-						<input class="form-control" type="number" id="amount" min="1" max="10000" placeholder="Amount" value="{{bid.next}}" />
-						<span class="input-group-btn">
-							<input class="btn btn-primary" type="button" value="Place bid" data-toggle="modal" data-target="#bidModal" />
-						</span>
-					</div>
-				</div>
-			</form>
+		{{/each}}
 		</div>
 	</div>
-</main>
+	<div class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-4 offset-lg-0">
+		<h6 class="text-muted">Description</h6>
+		<p>{{description}}</p>
+		<h6 class="text-muted">{{#if bid.highest}}Highest{{else}}Starting{{/if}} bid</h6>
+		<span class="h1 display-4" id="highest">${{#if bid.highest}}{{bid.highest}}{{else}}{{bid.starting}}{{/if}}</span>
+		<form action="#" method="get">
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">$</span>
+					<input class="form-control" type="number" id="amount" min="1" max="10000" placeholder="Amount" value="{{bid.next}}" />
+					<span class="input-group-btn">
+						<input class="btn btn-primary" type="button" value="Place bid" data-toggle="modal" data-target="#bidModal" />
+					</span>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
 {{/with}}
 {{else}}
-<main class="container-fluid">
-	<div class="row">
-		<div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-			<div class="alert alert-danger">
-				<strong>Error! </strong>Item not found.
-			</div>
+<div class="row">
+	<div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+		<div class="alert alert-danger">
+			<strong>Error! </strong>Item not found.
 		</div>
 	</div>
-</main>
+</div>
 {{/if}}
 
 
@@ -60,7 +56,7 @@
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				<h4 class="modal-title">Place bid</h4>
+				<h6 class="modal-title">Place bid</h6>
 			</div>
 			<div class="modal-body">
 				<div class="form-group">

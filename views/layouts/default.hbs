@@ -4,13 +4,28 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
 	<title>{{#if title}}{{title}}{{else}}{{@root.config.title}}{{/if}}</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700" />
 	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="/assets/main.css" />
 	<link rel="stylesheet" href="/assets/items.css" />
 	<link rel="stylesheet" href="/assets/item.css" />
 </head>
 <body>
-	{{{body}}}
+	<main class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 offset-sm-0 col-md-12 offset-md-0 col-lg-8 offset-lg-2">
+				<nav class="navbar navbar-light">
+					<a class="navbar-brand" href="/">{{@root.config.title}}</a>
+					<div class="nav navbar-nav">
+						<a class="nav-item nav-link" href="/">About</a>
+						<a class="nav-item nav-link" href="/items/">Browse</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		{{{body}}}
+	</main>
 	<script src="/jquery/jquery.min.js"></script>
 	<script src="/bootstrap/js/bootstrap.min.js"></script>
 	<script src="/imgix.js/imgix.min.js"></script>

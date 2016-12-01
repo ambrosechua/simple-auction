@@ -1,9 +1,25 @@
 .items {
-	margin: -1em;
+	margin: -1rem;
 }
 .item {
-	margin: 1em;
+	margin: 1rem;
 }
+
+.item {
+	position: relative;
+}
+.item:after {
+	content: '';
+	display: block;
+	width: 100%;
+	padding-top: calc(10 / 16 * 100%);
+}
+.item a {
+	display: block;
+	position: absolute;
+	top: 0;
+}
+
 
 @media (min-width: 768px) {
 	.items {
@@ -12,6 +28,10 @@
 	}
 	.item {
 		flex: 1 0 auto;
-		width: calc(50% - 4em);
+		width: calc(50% - 4rem);
+	}
+
+	.item:after {
+		padding-top: calc(4 / 3 * 100%);
 	}
 }

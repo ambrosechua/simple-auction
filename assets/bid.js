@@ -40,7 +40,9 @@ $('#placeBid').click(function () {
 
 var update = function update() {
 	var success = function success(data) {
-		$('#highest').text('$' + (data.bid.highest || data.bid.starting));
+		if (data.bid) {
+			$('#highest').text('$' + (data.bid.highest || data.bid.starting));
+		}
 	};
 
 	var error = function error(xhr) {

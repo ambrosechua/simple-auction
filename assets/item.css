@@ -6,10 +6,10 @@
 }
 
 .images {
-	margin: -1em;
+	margin: -1rem;
 }
 .image {
-	margin: 1em;
+	margin: 1rem;
 }
 
 @media (min-width: 768px) {

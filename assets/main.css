@@ -1,3 +1,42 @@
-main {
-	padding-top: 6vw;
+body {
+	font-family: "Fira Sans",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		"Roboto",
+		"Helvetica Neue", Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.navbar-brand {
+	/* font-weight: 600; */
+
+}
+
+
+
+main,
+main.container-fluid {
+	padding: 1rem;
+}
+
+.navbar {
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+	main,
+	main.container-fluid {
+		padding: 2rem;
+	}
+
+	.navbar {
+		margin-bottom: 2rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.navbar-brand {
+		width: 100%;
+	}
 }

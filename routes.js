@@ -32,6 +32,11 @@ routes.use(bodyparser.urlencoded({
 const logic = new Logic();
 const config = logic.getConfig();
 
+routes.get('/*', (req, res, next) => {
+	res.set('Cache-Control', 'no-cache, no-store');
+	next();
+});
+
 routes.get('/', (req, res, next) => {
 	logic.getIndex().then((content) => {
 		res.render('index', {
