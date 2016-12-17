@@ -22,6 +22,17 @@
 	<div class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-4 offset-lg-0">
 		<h6 class="text-muted">Description</h6>
 		<p>{{description}}</p>
+		{{#if info}}
+		<p>{{info}}</p>
+		{{/if}}
+		{{#if sizes}}
+		<h6 class="text-muted">Sizes</h6>
+		<p>
+		{{#each sizes}}
+		{{@key}}: {{this}}<br />
+		{{/each}}
+		</p>
+		{{/if}}
 		<h6 class="text-muted">{{#if bid.highest}}Highest{{else}}Starting{{/if}} bid</h6>
 		<span class="h1 display-4" id="highest">${{#if bid.highest}}{{bid.highest}}{{else}}{{bid.starting}}{{/if}}</span>
 		<form action="#" method="get">
